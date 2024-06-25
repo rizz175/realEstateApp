@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:realestate/core/constants/colors_constants.dart';
 import 'package:realestate/view/app_navigation/app_navigation_view.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-void main() {
+Future<void> main() async {
+  await SystemChrome.setPreferredOrientations(
+    [DeviceOrientation.portraitUp],
+  );
   runApp(const MyApp());
 }
 
